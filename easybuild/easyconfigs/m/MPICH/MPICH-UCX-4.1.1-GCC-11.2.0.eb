@@ -1,0 +1,16 @@
+name = 'MPICH'
+version = '4.1.1'
+
+homepage = 'https://www.mpich.org/'
+description = """MPICH is a high-performance and widely portable implementation 
+of the Message Passing Interface (MPI) standard (MPI-1, MPI-2 and MPI-3)."""
+
+toolchain = {'name': 'GCC', 'version': '12.2.0'}
+
+source_urls = ['https://www.mpich.org/static/downloads/%(version)/mpich-%(version).tar.gz']
+sources = [SOURCELOWER_TAR_GZ]
+checksums = []
+
+configopts = '--with-devices=ch4:ucx'
+dependencies = []
+moduleclass = 'mpi'
